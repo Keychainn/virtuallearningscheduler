@@ -67,6 +67,7 @@ def makeDatetimeObj(hrmin):
 
 def commands(pdDict):
     periods=((9,8),(10,13),(11,18),(12,23),(13,28)) # in military time
+    periods=((20,59),(21,0),(21,1),(21,2),(21,3))
     day = input("Is today a 1-5 or 6-10 day? Type 1 or 6: ")
     if int(day) in (1,6):
         if int(day)==6:
@@ -85,10 +86,10 @@ def commands(pdDict):
 
             if not pdDict[str(period+addon)]['free']: # check if free
                 print("Opening class links for period {}: {}".format(period+addon,pdDict[str(period+addon)]["name"]))
-                system("start chrome {}".format(pdDict[str(period+addon)]['zoom']))
-                for link in pdDict[str(period)]["additional"]:
+                for link in pdDict[str(period+addon)]["additional"]:
                     if link:
                         system(f"start chrome {link}")
+                system("start chrome {}".format(pdDict[str(period+addon)]['zoom']))
 
             period+=1
     else:
@@ -99,9 +100,11 @@ def commands(pdDict):
 if __name__=="__main__":
     try:
         with open("data.json") as json_file:
-            data=json.load(json_file)
-            commands(data)
+            pass
     except:
         print("It looks like a data file doesn't exist (yet). Please contact qsun30@stuy.edu if this problem persists. If this is your first time using this program, this is expected!")
         input("Press enter to start inputting classes, or command/control+C to exit. This program works best if run in Windows Powershell or Windows Command Prompt.")
         createData()
+    with open("data.json") as json_file:
+        data=json.load(json_file)
+        commands(data)
