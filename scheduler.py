@@ -97,6 +97,8 @@ def commands(pdDict):
 
 
 if __name__=="__main__":
+    print("Run \"git pull\" every once in a while to stay up to date.")
+    sleep(2)
     try:
         with open("data.json") as json_file:
             exist=True
