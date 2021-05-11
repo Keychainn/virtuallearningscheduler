@@ -1,5 +1,8 @@
 ## Stuy virtual learning scheduler for Windows
 ---
+#### Setting up for dummies
+- create a folder, and navigate to it with a terminal. Run ```git clone https://github.com/Keychainn/virtuallearningscheduler.git``` to get the files locally. Refer to Instructions and Info step 1 to run.
+---
 #### What is it?
 - I always get a a jolting sense of dread when I'm a minute late to class. Maybe I forgot about the time. However, this shall plague Stuy students no more. With this program, your zoom/google meets link will automatically launch, along with any links to attendance questions or student.desmos.com, jupitered.com, etc. Please excuse the uncommented code; I have been making this for 2 hours on on end.
 ---

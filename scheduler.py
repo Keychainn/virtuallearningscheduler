@@ -3,21 +3,21 @@ import json
 from os import system
 from datetime import datetime
 
-def checkIfElementsIn(userTuple,userInput):
+def checkIfElementsIn(userTuple,userInput): # helper fx to check if any elements in given tuple are in a list
     conditional=False
     for x in userTuple:
         if x == userInput.lower():
             conditional=True
     return conditional
 
-def createData(): #TODO mention gym
+def createData(): # creates data.json file, requires user input
     print("\nRemember that days alternate between pds 1-5 and 6-10!")
     print("Press command/control+c to exit at any time. does not work on thonny or other Python IDE; use the stop button instead.")
     sleep(1)
 
     pdDict={}
 
-    for classNum in range(10):
+    for classNum in range(10): # 10 periods
         subDict={} # inside to flush when frees are in middle of day
         print("\nWhat class do you have for period {}? Type \"N/A\" or \"free\" if you have a free or lunch during this period. Do not repeat subject names.".format(classNum+1))
         selectedClass = input("> ")
