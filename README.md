@@ -30,4 +30,4 @@ git clone https://github.com/Keychainn/virtuallearningscheduler.git
 - (dev note) I am not sure if sleep is the best way to do the waiting. Perhaps await or something similar may work?
 ---
 #### How to steal my code:
-- On line 70, it has `periods=((9,8),(10,13),(11,18),(12,23),(13,28))`. If you want to adapt this code for personal use or for other schedules, add/remove/edit the tuples in `(militaryhour,minute)` format in chronological order.
+- On line 69, it has `periods=((9,8),(10,13),(11,18),(12,23),(13,28))`. If you want to adapt this code for personal use or for other schedules, add/remove/edit the tuples in `(militaryhour,minute)` format in chronological order.
