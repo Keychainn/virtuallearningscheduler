@@ -88,8 +88,8 @@ def commands(pdDict):
                 print("Opening class links for period {}: {}".format(period+addon,pdDict[str(period+addon)]["name"]))
                 for link in pdDict[str(period+addon)]["additional"]:
                     if link:
-                        system(f"start chrome {link}")
-                system("start chrome {}".format(pdDict[str(period+addon)]['zoom']))
+                        system(f"start chrome \"{link}\"")
+                system("start chrome \"{}\"".format(pdDict[str(period+addon)]['zoom']))
 
             period+=1
     else:
