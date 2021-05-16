@@ -1,4 +1,4 @@
-## Stuy virtual learning scheduler for Windows
+## Stuy virtual learning scheduler for Chrome
 ---
 #### Setting up for dummies
 - Create a folder, and navigate to it with a terminal. To get the files locally, run
