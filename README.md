@@ -32,4 +32,4 @@ Refer to Instructions and Info steps 1 and 2 to run the file.
 - I haven't figured out a GUI (not to be confused with a [DUI :D](https://en.wikipedia.org/wiki/Driving_under_the_influence))  yet, so everything is done in the command line for now.
 ---
 #### How to steal my code:
-- On line 73, it has `periods=((9,8),(10,13),(11,18),(12,23),(13,28))`. If you want to adapt this code for personal use or for other schedules, add/remove/edit the tuples in `(militaryhour,minute)` format in chronological order.
+- On line 103, it has `periods=((9,8),(10,13),(11,18),(12,23),(13,28))`. If you want to adapt this code for personal use or for other schedules, add/remove/edit the tuples in `(militaryhour,minute)` format in chronological order.
