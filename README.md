@@ -1,6 +1,6 @@
 ## Stuy virtual learning scheduler for Chrome
 ---
-#### Setting up for dummies
+#### Setting up for dummies. Two options:
 1. If you don't have git, you can download the scheduler.zip file, and [unzip](https://www.sweetwater.com/sweetcare/articles/how-to-zip-and-unzip-files/) it to a location of your choosing.
 2. Create a folder and navigate to it with a terminal. To get the files locally, run
 ```
