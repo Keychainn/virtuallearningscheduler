@@ -1,7 +1,13 @@
 import json
 import os
 
-def osOpen():
+def osOpen(): # different strings depending on OS
+    if os.name=="posix":
+        return "open -a '{}' \"{}\""
+    elif os.name=="nt":
+        return "start {} \"{}\""
+
+def osOpenDeprecated(): # backwards compatability TODO remove
     if os.name=="posix":
         return "open -a 'Google Chrome' \"{}\""
     elif os.name=="nt":
@@ -20,9 +26,19 @@ def commands(pdDict):
             if check1 != 'free': # check if free
                 # print('checkpoint')
                 print("Opening class links for period {}: {}".format(period,pdDict[str(period)]["name"]))
+                
                 for link in pdDict[str(period)]["additional"]:
-                    os.system(osOpen().format(link))
-                os.system(osOpen().format(pdDict[str(period)]['zoom']))
+                    try: # backwards compatability for people with old data.json files TODO remove
+                        os.system(osOpen().format(pdDict["browser"],link))
+                    except:
+                        print("Opened using deprecated version. This will continue to work, but consider going through the data creation process again to stay up to date.")
+                        os.system(osOpenDeprecated().format(link))
+
+                try: # backwards compatability TODO remove
+                    os.system(osOpen().format(pdDict["browser"],pdDict[str(period)]['zoom']))
+                except:
+                    print("Opened using deprecated version. This will continue to work, but consider going through the data creation process again to stay up to date. (Refer to Instructions and Info section if you don't want to completely remake data file.)")
+                    os.system(osOpenDeprecated().format(pdDict[str(period)]['zoom']))
 
             period+=1
     else:
